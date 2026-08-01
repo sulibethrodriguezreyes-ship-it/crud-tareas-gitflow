@@ -1,4 +1,5 @@
 function addTask() {
+
     const input = document.getElementById("taskInput");
     const text = input.value.trim();
 
@@ -9,7 +10,10 @@ function addTask() {
     const span = document.createElement("span");
     span.textContent = text;
 
+
+    // Botón para completar la tarea
     const doneButton = document.createElement("button");
+
     doneButton.textContent = "Completar";
     doneButton.classList.add("done-btn");
 
@@ -17,10 +21,32 @@ function addTask() {
         li.classList.toggle("completed");
     });
 
+
+    // Botón para eliminar una tarea
+    const deleteButton = document.createElement("button");
+
+    deleteButton.textContent = "Eliminar";
+    deleteButton.classList.add("delete-btn");
+
+    deleteButton.addEventListener("click", function () {
+        li.remove();
+    });
+
+
+    // Agregar los elementos a la tarea
     li.appendChild(span);
     li.appendChild(doneButton);
+    li.appendChild(deleteButton);
 
+    // Agregar la tarea a la lista
     document.getElementById("taskList").appendChild(li);
 
+    // Limpiar el campo de texto
     input.value = "";
+}
+
+
+// Eliminar todas las tareas
+function clearAll() {
+    document.getElementById("taskList").innerHTML = "";
 }
