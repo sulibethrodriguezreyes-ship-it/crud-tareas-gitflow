@@ -1,19 +1,23 @@
 function addTask() {
-  const input = document.getElementById("taskInput");
-  const text = input.value.trim();
+    const input = document.getElementById("taskInput");
+    const text = input.value.trim();
 
-  // Validación
-  if (text === "") return;
+    // Validación
+    if (text === "") return;
 
-  // Crear elemento li
-  const li = document.createElement("li");
+    // Crear elemento li
+    const li = document.createElement("li");
 
-  // Insertar texto
-  li.textContent = text;
+    // Crear span para el texto
+    const span = document.createElement("span");
+    span.textContent = text;
 
-  // Agregar a la lista
-  document.getElementById("taskList").appendChild(li);
+    // Agregar el span al li
+    li.appendChild(span);
 
-  // Limpiar input
-  input.value = "";
+    // Agregar el li a la lista
+    document.getElementById("taskList").appendChild(li);
+
+    // Limpiar input
+    input.value = "";
 }
