@@ -94,3 +94,12 @@ li span {
   text-decoration: line-through;
   color: gray;
 }
+
+.delete-btn {
+    background: #e53e3e;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background: #c53030;
+}
