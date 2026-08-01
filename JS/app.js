@@ -22,7 +22,7 @@ function addTask() {
     });
 
 
-    // Botón para eliminar la tarea
+    // Botón para eliminar una tarea
     const deleteButton = document.createElement("button");
 
     deleteButton.textContent = "Eliminar";
@@ -41,6 +41,12 @@ function addTask() {
     // Agregar la tarea a la lista
     document.getElementById("taskList").appendChild(li);
 
-    // Limpiar el campo
+    // Limpiar el campo de texto
     input.value = "";
+}
+
+
+// Eliminar todas las tareas
+function clearAll() {
+    document.getElementById("taskList").innerHTML = "";
 }
