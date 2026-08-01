@@ -13,7 +13,7 @@ body {
   padding: 25px;
   border-radius: 12px;
   width: 350px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -30,8 +30,8 @@ h1 {
 input {
   flex: 1;
   padding: 10px;
-  border-radius: 8px;
   border: 1px solid #ccc;
+  border-radius: 8px;
   outline: none;
 }
 
@@ -42,7 +42,7 @@ button {
   background: #667eea;
   color: white;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 button:hover {
@@ -52,6 +52,7 @@ button:hover {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
@@ -60,30 +61,20 @@ li {
   border-radius: 8px;
   margin-bottom: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-li.completada span {
-  text-decoration: line-through;
-  color: gray;
-}
-
-.actions {
-  display: flex;
-  gap: 5px;
-}
-
-.done-btn {
-  background: #48bb78;
-}
-
-.delete-btn {
-  background: #e53e3e;
+li span {
+  flex: 1;
+  word-break: break-word;
 }
 
 .clear-btn {
   margin-top: 10px;
   width: 100%;
   background: #e53e3e;
+}
+
+.clear-btn:hover {
+  background: #c53030;
 }
