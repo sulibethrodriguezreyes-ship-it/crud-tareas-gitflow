@@ -1,19 +1,26 @@
 function addTask() {
-  const input = document.getElementById("taskInput");
-  const text = input.value.trim();
+    const input = document.getElementById("taskInput");
+    const text = input.value.trim();
 
-  // Validación
-  if (text === "") return;
+    if (text === "") return;
 
-  // Crear elemento li
-  const li = document.createElement("li");
+    const li = document.createElement("li");
 
-  // Insertar texto
-  li.textContent = text;
+    const span = document.createElement("span");
+    span.textContent = text;
 
-  // Agregar a la lista
-  document.getElementById("taskList").appendChild(li);
+    const doneButton = document.createElement("button");
+    doneButton.textContent = "Completar";
+    doneButton.classList.add("done-btn");
 
-  // Limpiar input
-  input.value = "";
+    doneButton.addEventListener("click", function () {
+        li.classList.toggle("completed");
+    });
+
+    li.appendChild(span);
+    li.appendChild(doneButton);
+
+    document.getElementById("taskList").appendChild(li);
+
+    input.value = "";
 }
