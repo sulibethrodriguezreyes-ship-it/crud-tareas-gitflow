@@ -78,3 +78,28 @@ li span {
 .clear-btn:hover {
   background: #c53030;
 }
+
+.done-btn {
+  background: #48bb78;
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.done-btn:hover {
+  background: #38a169;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn {
+    background: #e53e3e;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background: #c53030;
+}
